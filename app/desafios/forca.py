@@ -8,7 +8,7 @@ Faça um jogo para o usuário adivinhar qual a palavra secreta. Ex.: forca.
 -Faça a contage de tentativas do usuário.
 
 """
-
+"""
 palavra = "onomatopeia"
 acertos = ""
 tentativas = 0
@@ -18,3 +18,4 @@ while True:
     exibicao = []
     for letra in palavra:
         if letra in letra
+"""
