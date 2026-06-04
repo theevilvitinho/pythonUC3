@@ -8,4 +8,8 @@ Nome encontrado!
 """
 
 nomes = ["Ana","Carlos","Maria","João"]
-print("Maria" in nomes)
+
+if "Maria" in nomes:
+    print("Encontrado")
+else:
+    print("Nome não encontrado")

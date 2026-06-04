@@ -7,7 +7,11 @@ Ao final, exiba:
 """
 
 numeros = []
-int(input("Digite 5 números: "))
 
-for n in numeros:
-    numeros = [n]
+
+for x in range(5):
+    num = int(input("Digite um número: "))
+    numeros.append(num)
+
+print(f"Lista de números: {numeros}")
+print(f"A soma de todos os números: {sum(numeros)}")
