@@ -1,4 +1,5 @@
-import subprocess
+import os
+#import subprocess
 
 
 
@@ -32,4 +33,6 @@ with open("app\exemplos\dados.txt","a") as arquivo:
 
 # Abrindo em um programa da minha escolha
 
-subprocess.Popen(["code","app\exemplos\dados.txt"])
+#subprocess.Popen(["code","app\exemplos\dados.txt"])
+
+os.startfile("app\exemplos\dados.txt")
