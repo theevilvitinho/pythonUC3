@@ -11,3 +11,6 @@ print(pessoa["nome"])
 
 for chave, valor in pessoa.items():
     print(f"Seu {chave} é {valor}")
+
+pessoa.update({"nome": "Jair", "cpf": "555.776.545-09", "telefone": 21940038928})
+print(pessoa)
