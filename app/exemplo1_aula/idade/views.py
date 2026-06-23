@@ -8,19 +8,23 @@ def home(request):
     conteudo = False
 
     if request.method == "POST":
-        idade = int(request.POST.get("idade"))
-
-        if idade >= 18:
-            conteudo = True
+        idade_raw = request.POST.get("idade", "")
+        try:
+            idade = int(idade_raw)
+        except (ValueError, TypeError):
+            mensagem = "Por favor, insira uma idade válida"
         else:
-            mensagem = "ACESSO RECUSADO: Você é menor de idade!"
+            if idade >= 18:
+                conteudo = True
+            else:
+                mensagem = "ACESSO RECUSADO: Você é menor de idade!"
 
-        return render(
-            request,
-            "index.html",
+    return render(
+        request,
+        "index.html",
 
-            {
-                "mensagem": mensagem,
-                "conteudo": conteudo,
-            }
-        )
+        {
+            "mensagem": mensagem,
+            "conteudo": conteudo,
+        }
+    )
